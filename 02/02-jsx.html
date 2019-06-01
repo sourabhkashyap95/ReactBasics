@@ -1,0 +1,23 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js" crossorigin></script>
+<script type="text/babel">
+
+const rootElement = document.getElementById("root")
+
+const content = "Hello World!"
+const testClassName = "container"
+const props = {
+    className: 'container',
+    children: 'Helloww'
+}
+
+const element = <div className="myClass" {...props}/> //items will be populated from props constants
+//if not provided from props default value will be taken
+
+const element1 = <div {...props} className="myClass" /> //items will be populated from local variable
+
+//const element = <div className="container">{content}</div>
+ReactDOM.render(element,rootElement)
+</script>
